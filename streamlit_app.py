@@ -26,5 +26,6 @@ if upload_file is not None:
     st.bar_chart(data[selected_column_for_bar_chart])
     st.balloons()
     st.snow()
-    
+    st.color_picker("Pick a color")
+
    
