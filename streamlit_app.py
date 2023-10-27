@@ -13,18 +13,29 @@ if upload_file is not None:
     st.write(data.describe())
     st.subheader('Data Visualization')
     st.subheader('Area chart')
-    selected_column_line=st.selectbox('Select a column for the area chart', data.columns)
-    st.area_chart(data[selected_column_line])
+    selected_column_for_area_chart=st.selectbox('Select a column for the area chart', data.columns)
+    st.area_chart(data[selected_column_for_area_chart])
     st.subheader('Scatter chart')
-    selected_column_line=st.selectbox('Select a column for the scatter chart', data.columns)
-    st.scatter_chart(data[selected_column_line])
+    selected_column_for_scatter_chart=st.selectbox('Select a column for the scatter chart', data.columns)
+    st.scatter_chart(data[selected_column_for_scatter_chart])
     st.subheader('Line chart')
-    selected_column_line=st.selectbox('Select a column for the Line chart', data.columns)
-    st.line_chart(data[selected_column_line])
+    selected_column_for_line_chart=st.selectbox('Select a column for the Line chart', data.columns)
+    st.line_chart(data[selected_column_for_line_chart])
     st.subheader('Bar chart')
-    selected_column_line=st.selectbox('Select a column for the Bar chart', data.columns)
-    st.bar_chart(data[selected_column_line])
+    selected_column_for_bar_chart=st.selectbox('Select a column for the Bar chart', data.columns)
+    st.bar_chart(data[selected_column_for_bar_chart])
     st.balloons()
     st.snow()
     with st.sidebar:
          st.radio("Choose the plot you want to view", ["Area", "Scatter", "Line", "Bar"])
+        if st.sidebar.radio.Area=True:
+            st.area_chart(data[selected_column_for_area_chart])
+        elif st.sidebar.radio.Scatter=True:
+             st.scatter_chart(data[selected_column_for_scatter_chart])
+        elif st.sidebar.radio.Line=True:
+            st.line_chart(data[selected_column_for_line_chart])
+        else:
+            st.bar_chart(data[selected_column_for_bar_chart])
+             
+            
+           
