@@ -24,9 +24,6 @@ if upload_file is not None:
     st.subheader('Bar chart')
     selected_column_for_bar_chart=st.selectbox('Select a column for the Bar chart', data.columns)
     st.bar_chart(data[selected_column_for_bar_chart])
-    st.subheader('bokeh chart')
-    selected_column_for_bokeh_chart=st.selectbox('Select a column for the bokeh chart', data.columns)
-    st.bokeh_chart(data[selected_column_for_bokeh_chart])
     st.balloons()
     st.snow()
     
