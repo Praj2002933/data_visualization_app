@@ -1,8 +1,7 @@
-import matplotlib.pyplot as plt
+import matplotlib
 import pandas as pd
 import seaborn as sns
 import streamlit as st
-import matplotlib
 
 st.title('Data Visualization App')
 upload_file = st.file_uploader("Upload your dataset", type=["csv", "txt"])
