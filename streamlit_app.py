@@ -7,7 +7,7 @@ if upload_file is not None:
     data = pd.read_csv(upload_file)
     st.subheader('Display Data')
     st.dataframe(data)
-    st.table(data.iloc[0:10])
+    st.table(data.head())
     st.subheader('Summary Statistics')
     st.write(data.describe())
     st.subheader('Data Visualization')
