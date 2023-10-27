@@ -1,5 +1,5 @@
-!pip install matplotlib
-!pip install pandas
+pip install matplotlib
+pip install pandas
 
 import matplotlib.pyplot as plt
 import pandas as pd
