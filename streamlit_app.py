@@ -1,6 +1,4 @@
-import matplotlib
 import pandas as pd
-import seaborn as sns
 import streamlit as st
 
 st.title('Data Visualization App')
@@ -13,14 +11,12 @@ if upload_file is not None:
     st.subheader('Summary Statistics')
     st.write(data.describe())
     st.subheader('Data Visualization')
-    st.subheader('Line Plot')
-    selected_column_line=st.selectbox('Select a column for the pair plot', data.columns)
-    sns.pairplot(data, hue="selected_column_line")
-    st.pyplot()
-    st.subheader('Bar Plot')
-    selected_column_bar = st.selectbox('Select a column for the bar plot', data.columns)
-    plt.bar(data.index, data[selected_column_bar])
-    st.pyplot()
+    st.subheader('Area chart')
+    selected_column_line=st.selectbox('Select a column for the area chart', data.columns)
+    st.area_chart(data[selected_column_line])
+    st.subheader('Bar chart')
+    selected_column_bar = st.selectbox('Select a column for the bar chart', data.columns)
+    st.bar_chart(data.index, data[selected_column_bar])
     st.subheader('Interactive Elements')
     num_points = st.slider("Select the number of data points to display", 1, len(data))
     selected_column_dropdown=st.selectbox('Select a column for the dropdown',data.columns)
