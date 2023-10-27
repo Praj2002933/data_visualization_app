@@ -24,6 +24,9 @@ if upload_file is not None:
     st.subheader('Bar chart')
     selected_column_for_bar_chart=st.selectbox('Select a column for the Bar chart', data.columns)
     st.bar_chart(data[selected_column_for_bar_chart])
+    st.subheader('altair chart')
+    selected_column_for_altair_chart=st.selectbox('Select a column for the Bar chart', data.columns)
+    st.altair_chart(data[selected_column_for_bar_chart])
     st.balloons()
     st.snow()
     
