@@ -26,4 +26,4 @@ if upload_file is not None:
     st.bar_chart(data[selected_column_line])
     st.balloons()
     st.snow()
-    
+    a = st.sidebar.markdown('Select any one plot which you want to see:', [area_chart, scatter_chart, line_chart, bar_chart])
