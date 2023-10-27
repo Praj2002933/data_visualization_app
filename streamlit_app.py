@@ -26,7 +26,7 @@ if upload_file is not None:
     st.bar_chart(data[selected_column_for_bar_chart])
     st.balloons()
     st.snow()
-    with st.sidebar:
+    
          selected_area = st.sidebar.radio("Choose the plot to be viewed", ["Area", "Scatter", "Line", "Bar"])
 
 if selected_area == "Area":
