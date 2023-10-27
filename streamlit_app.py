@@ -17,10 +17,8 @@ if upload_file is not None:
     st.subheader('Scatter chart')
     selected_column_line=st.selectbox('Select a column for the scatter chart', data.columns)
     st.scatter_chart(data[selected_column_line])
-    st.subheader('Pydeck chart')
-    selected_column_line=st.selectbox('Select a column for the pydeck chart', data.columns)
-    st.pydeck_chart(data[selected_column_line])
-    st.subheader('vega-lite chart')
-    selected_column_line=st.selectbox('Select a column for the vega-lite chart', data.columns)
-    st.vega_lite_chart(data[selected_column_line])
+    st.subheader('Map')
+    selected_column_line=st.selectbox('Select a column for the scatter chart', data.columns)
+    st.map(data[selected_column_line])
+    
     
