@@ -14,11 +14,4 @@ if upload_file is not None:
     st.subheader('Area chart')
     selected_column_line=st.selectbox('Select a column for the area chart', data.columns)
     st.area_chart(data[selected_column_line])
-    st.subheader('Line chart')
-    selected_column_line = st.selectbox('Select a column for the line chart', data.columns)
-    st.line_chart(data.index, data[selected_column_line])
-    st.subheader('Interactive Elements')
-    num_points = st.slider("Select the number of data points to display", 1, len(data))
-    selected_column_dropdown=st.selectbox('Select a column for the dropdown',data.columns)
-    st.write(data.head(num_points))
-    st.write(data[selected_column_dropdown].head(num_points))
+    
