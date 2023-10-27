@@ -15,7 +15,7 @@ if upload_file is not None:
     st.subheader('Area chart')
     selected_column_for_area_chart=st.selectbox('Select a column for the area chart', data.columns)
     st.area_chart(data[selected_column_for_area_chart])
-    st.download_button("Download area chart", data[selected_column_for_area_chart])
+    st.download_button("Download area chart", selected_column_for_area_chart)
     st.subheader('Scatter chart')
     selected_column_for_scatter_chart=st.selectbox('Select a column for the scatter chart', data.columns)
     st.scatter_chart(data[selected_column_for_scatter_chart])
