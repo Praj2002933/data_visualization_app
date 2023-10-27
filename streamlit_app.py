@@ -24,6 +24,6 @@ if upload_file is not None:
     st.subheader('Bar chart')
     selected_column_line=st.selectbox('Select a column for the Bar chart', data.columns)
     st.bar_chart(data[selected_column_line])
-    
-    
+    st.balloons()
+    st.snow()
     
