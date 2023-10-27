@@ -18,7 +18,12 @@ if upload_file is not None:
     st.subheader('Scatter chart')
     selected_column_line=st.selectbox('Select a column for the scatter chart', data.columns)
     st.scatter_chart(data[selected_column_line])
-    
+    st.subheader('Line chart')
+    selected_column_line=st.selectbox('Select a column for the Line chart', data.columns)
+    st.line_chart(data[selected_column_line])
+    st.subheader('Bar chart')
+    selected_column_line=st.selectbox('Select a column for the Bar chart', data.columns)
+    st.bar_chart(data[selected_column_line])
     
     
     
