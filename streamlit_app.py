@@ -1,9 +1,8 @@
-pip install matplotlib
-pip install pandas
-
 import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 import streamlit as st
+import matplotlib
 
 st.title('Data Visualization App')
 upload_file = st.file_uploader("Upload your dataset", type=["csv", "txt"])
@@ -16,8 +15,8 @@ if upload_file is not None:
     st.write(data.describe())
     st.subheader('Data Visualization')
     st.subheader('Line Plot')
-    selected_column_line=st.selectbox('Select a column for the line plot', data.columns)
-    plt.plot(data[selected_column_line])
+    selected_column_line=st.selectbox('Select a column for the pair plot', data.columns)
+    sns.pairplot(data, hue="selected_column_line")
     st.pyplot()
     st.subheader('Bar Plot')
     selected_column_bar = st.selectbox('Select a column for the bar plot', data.columns)
