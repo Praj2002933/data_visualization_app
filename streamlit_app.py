@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-st.image('C:/Users/pooja kulkarni/Downloads/img0.jpg')
 st.title('Data Visualization')
 upload_file = st.file_uploader("Upload your dataset", type=["csv", "txt"])
 if upload_file is not None:
