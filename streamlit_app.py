@@ -28,13 +28,13 @@ if upload_file is not None:
     st.snow()
     with st.sidebar:
          st.radio("Choose the plot you want to view", ["Area", "Scatter", "Line", "Bar"])
-   if st.sidebar.radio.Area=True:
+if st.sidebar.radio.Area=True:
             st.area_chart(data[selected_column_for_area_chart])
-     elif st.sidebar.radio.Scatter=True:
+elif st.sidebar.radio.Scatter=True:
              st.scatter_chart(data[selected_column_for_scatter_chart])
-    elif st.sidebar.radio.Line=True:
+elif st.sidebar.radio.Line=True:
             st.line_chart(data[selected_column_for_line_chart])
-      else:
+else:
             st.bar_chart(data[selected_column_for_bar_chart])
              
             
