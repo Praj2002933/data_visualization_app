@@ -36,6 +36,6 @@ elif selected_area == "Scatter":
 elif selected_area == "Line":
      st.line_chart(data[selected_column_for_line_chart])
 else:
-     st.bar_chart(data[selected_column_for_bar_chart])
+     st.bar_chart(data[selected_column_for_bar_chart])'''
 
            
