@@ -27,7 +27,7 @@ if upload_file is not None:
     st.balloons()
     st.snow()
     with st.sidebar:
-    add_markdown = st.markdown(
+         add_markdown = st.markdown(
         "Choose the plot to be viewed",
         ("Area", "Scatter","Line","Bar")
     )
